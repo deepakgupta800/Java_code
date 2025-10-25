@@ -1,0 +1,13 @@
+spring:
+  application:
+  name: ReactiveProject
+
+
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/Book_Store
+    username: deepak_gupta
+    password: password
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
