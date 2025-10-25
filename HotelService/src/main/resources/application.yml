@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: Hotel-Service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/Hotel-service
+    username: deepak_gupta
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Fixed indentation (4 spaces)
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+server:
+  port: 8085
